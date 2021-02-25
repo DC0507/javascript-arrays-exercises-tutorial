@@ -2,5 +2,12 @@ let par = "Lorem ipsum dolor sit amet consectetur adipiscing elit Curabitur eget
 let counts = {};
 
 // your code here
-
+let parArray = par.toLowerCase().split('');
+for (let i=0; i<parArray.length-1; i++){
+    if(parArray[i] in counts && parArray[i] != ''){
+        counts[parArray[i]] += 1;
+    } else{
+        counts[parArray[i]] = 1;
+    }
+}
 console.log(counts);
